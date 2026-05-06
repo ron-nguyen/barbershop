@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #0a0a0a;
+    --color-fg: #f5f5f5;
+    --color-gold: #c9a24b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-white antialiased font-sans;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center bg-gold text-ink px-6 py-3 font-semibold uppercase tracking-wider text-sm transition-colors hover:bg-gold-light;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-gold text-gold px-6 py-3 font-semibold uppercase tracking-wider text-sm transition-colors hover:bg-gold hover:text-ink;
+  }
+  .container-x {
+    @apply container mx-auto px-4 md:px-8;
+  }
+  .gold-divider {
+    @apply mx-auto h-px w-16 bg-gold;
+  }
+  .eyebrow {
+    @apply text-gold uppercase tracking-[0.3em] text-xs font-semibold;
+  }
+}
